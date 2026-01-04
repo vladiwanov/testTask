@@ -1,0 +1,67 @@
+@import '../../styles/main.scss';
+// @import '../../styles/hero-title.module';
+// @import '../../styles/animation';
+
+.mainContainer {
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // background-size: contain;
+      // box-sizing: content-box;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(47, 48, 58, 0.8);
+      background-image:
+            url("../../img/realistic/BGI.png");
+      // outline: 1px solid green;
+}
+
+
+
+.startButton {
+      display: block;
+      // width: auto;
+      height: auto;
+      margin: auto;
+      padding: 50px 30px;
+      text-align: center;
+      font-size: 50px;
+      // background-color: #999;
+
+
+}
+
+
+
+.mainTitile {
+      display: block;
+      text-align: center;
+      // font-size: 64px;
+      font-size: 80px;
+      margin: auto;
+      padding: 400px;
+      // font-family: StyreneAWeb, sans-serif;
+      font-family: GothamPro, sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      // background-color: black;
+      color: #fff;
+}
+
+
+@media screen and (min-width: $tablet) {
+      .mainContainer {
+            display: block;
+      }
+
+
+      .mainTitile {
+            display: block;
+      }
+}
+
+
+@media screen and (min-width: $tablet) {}
+
+@media screen and (min-width: $tablet) {}

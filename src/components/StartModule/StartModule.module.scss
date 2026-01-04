@@ -1,0 +1,41 @@
+@import '../../styles/main.scss';
+
+.mainContainer {
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // background-size: contain;
+      // box-sizing: content-box;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(47, 48, 58, 0.8);
+      background-image:
+            url("../../img/BGI.png");
+      // outline: 1px solid green;
+}
+
+
+.startModule {
+      display: flex;
+      flex-direction: row;
+}
+
+
+
+
+@media screen and (min-width: $tablet) {
+      .mainContainer {
+            display: block;
+      }
+
+
+      .mainTitile {
+            display: block;
+      }
+}
+
+
+@media screen and (min-width: $tablet) {}
+
+@media screen and (min-width: $tablet) {}
