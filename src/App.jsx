@@ -7,7 +7,7 @@ import routes from './routes';
 import NotFoundPage from './views/NotFoundPage';
 import ResultModule from './components/ResultModule';
 import Layout from './views/Layout/Layout';
-import GameLayout from './components/GameLayout';
+import GameLayout from './views/GameLayout';
 
 function App() {
   // const [count, setCount] = useState(0)

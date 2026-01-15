@@ -1,4 +1,3 @@
-import React from 'react';
 import s from './GameModule.module.scss';
 
 import StartModule from '../../components/StartModule';
