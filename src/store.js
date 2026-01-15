@@ -7,15 +7,14 @@ export const useGameChoice = create(set => ({
   getUserChoice: usarg =>
     set(state => {
       state.usChoice = usarg;
-      console.log('STATE_US_CHOICE:::::', state.usChoice);
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
       return { usChoice: state.usChoice };
     }),
 
   getPcChoice: pcarg =>
     set(state => {
       state.pcChoice = pcarg;
-      console.log('STATE_PC_CHOICE:::::', state.pcChoice);
-
+      // console.log('PC_CHOICE_IN_STATE:::::', state.pcChoice);
       return { pcChoice: state.pcChoice };
     }),
 

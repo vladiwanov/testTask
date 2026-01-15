@@ -11,7 +11,6 @@ export default function Userside() {
   const { rez } = routes;
 
   const gameFun = id => {
-    console.log('ID:::::', id);
     getChoice(id);
   };
 
