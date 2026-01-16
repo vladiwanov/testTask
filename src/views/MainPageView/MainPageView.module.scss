@@ -18,35 +18,31 @@
 }
 
 
-
-.startButton {
-      display: block;
-      // width: auto;
-      height: auto;
-      margin: auto;
-      padding: 50px 30px;
-      text-align: center;
-      font-size: 50px;
-      // background-color: #999;
-
-
-}
-
-
-
 .mainTitile {
       display: block;
       text-align: center;
       // font-size: 64px;
       font-size: 80px;
       margin: auto;
-      padding: 400px;
+      padding: 200px 0 0;
       // font-family: StyreneAWeb, sans-serif;
-      font-family: GothamPro, sans-serif;
+      font-family: "Gotham Pro", sans-serif;
       font-weight: 300;
       font-style: italic;
       // background-color: black;
       color: #fff;
+}
+
+
+.startButton {
+      display: block;
+      width: auto;
+      height: auto;
+      // margin: auto;
+      padding: 50px 30px;
+      text-align: center;
+      font-size: 50px;
+      // background-color: #999;
 }
 
 

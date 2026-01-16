@@ -1,12 +1,13 @@
 import React from 'react';
 import { useGameChoice } from '../../store';
 import s from './ResultModule.module.scss';
+import RestartButton from '../RestartButton';
 
 export default function ResultModule() {
   const userChoice = useGameChoice(state => state.usChoice);
   const pcChoice = useGameChoice(state => state.pcChoice);
-  console.log('USER_CHOICE IN REZULTMODULE IS :::::', userChoice);
-  console.log('PC_CHOICE IN REZULTMODULE IS :::::', pcChoice);
+  // console.log('USER_CHOICE IN REZULTMODULE IS :::::', userChoice);
+  // console.log('PC_CHOICE IN REZULTMODULE IS :::::', pcChoice);
 
   const gameRez = () => {
     switch (pcChoice) {
@@ -23,11 +24,16 @@ export default function ResultModule() {
     }
   };
 
-  console.log('RESULT OF GAME:::', gameRez());
+  // console.log('RESULT OF GAME:::', gameRez());
 
   return (
-    <section>
-      <h2 className={s.resultMessage}>Winer is {gameRez()} </h2>
+    <section className={s.resultPage}>
+      <div className={s.container}>
+        <h2 className={s.resultMessage}>
+          Winer is: {gameRez()}
+          <RestartButton />
+        </h2>
+      </div>
     </section>
   );
 }
