@@ -6,12 +6,12 @@ import routes from '../../routes';
 import { useGameChoice } from '../../store';
 
 export default function Userside() {
-  const getChoice = useGameChoice(state => state.getUserChoice);
+  const getChoiceId = useGameChoice(state => state.getUserChoiceId);
 
   const { rez } = routes;
 
   const gameFun = id => {
-    getChoice(id);
+    getChoiceId(id);
   };
 
   return (

@@ -5,18 +5,18 @@ import getPcChoice from '../PCside/pcChoce';
 import { useGameChoice } from '../../store';
 
 export default function PCside() {
-  const onPcChoice = useGameChoice(state => state.getPcChoice);
+  const onPcChoiceId = useGameChoice(state => state.getPcChoiceId);
 
   const getPcChoiceId = () => {
-    const pcChoiceID = getPcChoice();
-    return onPcChoice(pcChoiceID);
+    const pcChoiceId = getPcChoice();
+    return onPcChoiceId(pcChoiceId);
   };
 
   getPcChoiceId();
 
   const pcChoice = getPcChoice();
 
-  onPcChoice(pcChoice);
+  onPcChoiceId(pcChoice);
 
   return (
     <section>

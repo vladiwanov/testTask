@@ -1,31 +1,49 @@
 import { create } from 'zustand';
 
 export const useGameChoice = create(set => ({
-  usChoice: null,
-  pcChoice: null,
-
-  getUserChoice: usarg =>
+  usChoiceId: null,
+  pcChoiceId: null,
+  usChoiceName: null,
+  pcChoiceName: null,
+  getUserChoiseId: usidarg =>
     set(state => {
-      state.usChoice = usarg;
-      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
-      return { usChoice: state.usChoice };
+      state.usChoiseId = usidarg;
+      return { usChoiseId: state.usChoiseId };
     }),
 
-  getPcChoice: pcarg =>
+  getUserChoiceName: usnamearg =>
     set(state => {
-      state.pcChoice = pcarg;
+      state.usChoicename = usnamearg;
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+      return { usChoicename: state.usChoicename };
+    }),
+
+  getPcChoiceId: pcargId =>
+    set(state => {
+      state.pcChoiceId = pcargId;
       // console.log('PC_CHOICE_IN_STATE:::::', state.pcChoice);
-      return { pcChoice: state.pcChoice };
+      return { pcChoiceId: state.pcChoiceId };
+    }),
+
+  getPcChoiceName: usarg =>
+    set(state => {
+      state.pcChoiceName = usarg;
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+      return { pcChoiceName: state.pcChoiceName };
     }),
 
   resetState: () =>
     set(state => {
-      state.pcChoice = null;
-      state.usChoice = null;
+      state.pcChoiceId = null;
+      state.pcChoiceName = null;
+      state.usChoiceId = null;
+      state.usChoiceName = null;
 
       return {
-        usChoice: state.usChoice,
-        pcChoice: state.pcChoice,
+        usChoiceId: state.usChoiceId,
+        pcChoiceId: state.pcChoiceId,
+        usChoiceName: state.usChoiceName,
+        pcChoiceName: state.pcChoiceName,
       };
     }),
 }));
