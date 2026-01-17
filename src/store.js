@@ -3,19 +3,15 @@ import { create } from 'zustand';
 export const useGameChoice = create(set => ({
   usChoiceId: null,
   pcChoiceId: null,
-  usChoiceName: null,
-  pcChoiceName: null,
-  getUserChoiseId: usidarg =>
-    set(state => {
-      state.usChoiseId = usidarg;
-      return { usChoiseId: state.usChoiseId };
-    }),
+  // usChoiceName: null,
+  // pcChoiceName: null,
 
-  getUserChoiceName: usnamearg =>
+  getUserChoiceId: usidarg =>
     set(state => {
-      state.usChoicename = usnamearg;
-      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
-      return { usChoicename: state.usChoicename };
+      state.usChoiceId = usidarg;
+      console.log('PC_CHOICE_IN_STATE:::::', state.usChoiceId);
+
+      return { usChoiceId: state.usChoiceId };
     }),
 
   getPcChoiceId: pcargId =>
@@ -25,25 +21,32 @@ export const useGameChoice = create(set => ({
       return { pcChoiceId: state.pcChoiceId };
     }),
 
-  getPcChoiceName: usarg =>
-    set(state => {
-      state.pcChoiceName = usarg;
-      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
-      return { pcChoiceName: state.pcChoiceName };
-    }),
+  // getUserChoiceName: usnamearg =>
+  //   set(state => {
+  //     state.usChoicename = usnamearg;
+  //     // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+  //     return { usChoicename: state.usChoicename };
+  //   }),
 
-  resetState: () =>
-    set(state => {
-      state.pcChoiceId = null;
-      state.pcChoiceName = null;
-      state.usChoiceId = null;
-      state.usChoiceName = null;
+  // getPcChoiceName: usarg =>
+  //   set(state => {
+  //     state.pcChoiceName = usarg;
+  //     // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+  //     return { pcChoiceName: state.pcChoiceName };
+  //   }),
 
-      return {
-        usChoiceId: state.usChoiceId,
-        pcChoiceId: state.pcChoiceId,
-        usChoiceName: state.usChoiceName,
-        pcChoiceName: state.pcChoiceName,
-      };
-    }),
+  // resetState: () =>
+  //   set(state => {
+  //     state.pcChoiceId = null;
+  //     // state.pcChoiceName = null;
+  //     state.usChoiceId = null;
+  //     // state.usChoiceName = null;
+
+  //     return {
+  //       usChoiceId: state.usChoiceId,
+  //       pcChoiceId: state.pcChoiceId,
+  //       // usChoiceName: state.usChoiceName,
+  //       // pcChoiceName: state.pcChoiceName,
+  //     };
+  //   }),
 }));

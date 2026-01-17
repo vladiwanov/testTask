@@ -6,13 +6,13 @@ import { useGameChoice } from '../../store';
 
 export default function RestartButton() {
   const resetState = useGameChoice(state => state.resetState);
-  const { main } = routes;
+  const { game } = routes;
   const restartFun = () => {
     resetState();
   };
   return (
     <section className={s.RestartButton}>
-      <NavLink className={s.NavLink} to={main} onClick={restartFun}>
+      <NavLink className={s.NavLink} to={game} onClick={restartFun}>
         <h2 className={s.RestartButtonTitle}>Do You want to play again?</h2>
       </NavLink>
     </section>

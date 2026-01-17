@@ -4,20 +4,22 @@ import s from './ResultModule.module.scss';
 import RestartButton from '../RestartButton';
 
 export default function ResultModule() {
-  const userChoice = useGameChoice(state => state.usChoice);
-  const pcChoice = useGameChoice(state => state.pcChoice);
-  // console.log('USER_CHOICE IN REZULTMODULE IS :::::', userChoice);
-  // console.log('PC_CHOICE IN REZULTMODULE IS :::::', pcChoice);
+  const userChoiceId = useGameChoice(state => state.usChoiceId);
+  // const state = useGameChoice(state => state);
+  const pcChoiceId = useGameChoice(state => state.pcChoiceId);
+  console.log('USER_CHOICE IN REZULTMODULE IS :::::', userChoiceId);
+  console.log('PC_CHOICE IN REZULTMODULE IS :::::', pcChoiceId);
+  // console.log('STATE IN REZULTMODULE IS :::::', state);
 
   const gameRez = () => {
-    switch (pcChoice) {
-      case userChoice - 1 || userChoice + 2:
+    switch (pcChoiceId) {
+      case userChoiceId - 1 || userChoiceId + 2:
         // case userChoice - 1:
         return ' PC';
-      case userChoice + 1 || userChoice - 2:
+      case userChoiceId + 1 || userChoiceId - 2:
         // case userChoice + 1:
         return ' User';
-      case userChoice:
+      case userChoiceId:
         return ' EQUAL';
       default:
         return 'ERROR';

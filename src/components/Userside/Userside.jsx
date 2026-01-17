@@ -6,12 +6,16 @@ import routes from '../../routes';
 import { useGameChoice } from '../../store';
 
 export default function Userside() {
-  const getChoiceId = useGameChoice(state => state.getUserChoiceId);
+  // const gameState = useGameChoice(state => state);
+  // console.log('SATATE IN START_USERSIDE_MODULE::::', gameState);
+  const onUserChoiceId = useGameChoice(state => state.getUserChoiceId);
+  // console.log('ON_USER_SIDE_IS:::::🚘:::', onUserChoiceId);
 
   const { rez } = routes;
 
   const gameFun = id => {
-    getChoiceId(id);
+    onUserChoiceId(id);
+    // console.log('SATATE IN START_USERSIDE_MODULE::::', gameState);
   };
 
   return (
@@ -22,7 +26,9 @@ export default function Userside() {
         {usrImg.map(({ name, id, path }) => (
           <li key={id}>
             <NavLink className={s.button} onClick={() => gameFun(id)} to={rez}>
+              {/* <button className={s.button} onClick={() => gameFun(id)}> */}
               <img src={path} alt={name} />
+              {/* </button> */}
             </NavLink>
           </li>
         ))}
