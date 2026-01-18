@@ -44,8 +44,14 @@ export default function ResultModule() {
         <h2 className={s.resultMessage}>
           Winer is: {gameRez()}
           <div className={s.result}>
-            <img src={usChoiceImg} alt={usChoiceName} />
-            <img src={pcChoiceImg} alt={pcChoiceName} />
+            <div className={s.player}>
+              <h3>User</h3>
+              <img src={usChoiceImg} alt={usChoiceName} />
+            </div>
+            <div className={s.player}>
+              <h3>PC</h3>
+              <img src={pcChoiceImg} alt={pcChoiceName} />
+            </div>
           </div>
           <RestartButton />
         </h2>
