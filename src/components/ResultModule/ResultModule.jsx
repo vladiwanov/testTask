@@ -4,22 +4,32 @@ import s from './ResultModule.module.scss';
 import RestartButton from '../RestartButton';
 
 export default function ResultModule() {
-  const userChoiceId = useGameChoice(state => state.usChoiceId);
-  // const state = useGameChoice(state => state);
-  const pcChoiceId = useGameChoice(state => state.pcChoiceId);
-  console.log('USER_CHOICE IN REZULTMODULE IS :::::', userChoiceId);
+  // const userChoiceId = useGameChoice(state => state.usChoiceId);
+  const state = useGameChoice(state => state);
+  const {
+    pcChoiceId,
+    pcChoiceName,
+    pcChoiceImg,
+    usChoiceId,
+    usChoiceName,
+    usChoiceImg,
+  } = state;
+  // const pcChoiceId = useGameChoice(state => state.pcChoiceId);
+  console.log('USER_CHOICE IN REZULTMODULE IS :::::', usChoiceId);
   console.log('PC_CHOICE IN REZULTMODULE IS :::::', pcChoiceId);
   // console.log('STATE IN REZULTMODULE IS :::::', state);
 
   const gameRez = () => {
     switch (pcChoiceId) {
-      case userChoiceId - 1 || userChoiceId + 2:
-        // case userChoice - 1:
+      case usChoiceId - 1:
         return ' PC';
-      case userChoiceId + 1 || userChoiceId - 2:
-        // case userChoice + 1:
+      case usChoiceId + 2:
+        return ' PC';
+      case usChoiceId - 2:
         return ' User';
-      case userChoiceId:
+      case usChoiceId + 1:
+        return ' User';
+      case usChoiceId:
         return ' EQUAL';
       default:
         return 'ERROR';
@@ -33,6 +43,10 @@ export default function ResultModule() {
       <div className={s.container}>
         <h2 className={s.resultMessage}>
           Winer is: {gameRez()}
+          <div className={s.result}>
+            <img src={usChoiceImg} alt={usChoiceName} />
+            <img src={pcChoiceImg} alt={pcChoiceName} />
+          </div>
           <RestartButton />
         </h2>
       </div>

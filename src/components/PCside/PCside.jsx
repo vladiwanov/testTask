@@ -6,6 +6,8 @@ import { useGameChoice } from '../../store';
 
 export default function PCside() {
   const onPcChoiceId = useGameChoice(state => state.getPcChoiceId);
+  const onPcChoiceName = useGameChoice(state => state.getPcChoiceName);
+  const onPcChoiceImg = useGameChoice(state => state.getPcChoiceImg);
   // const getPcChoiceId = () => {
   //   const pcChoiceId = getPcChoice();
   //   return onPcChoiceId(pcChoiceId);
@@ -13,7 +15,9 @@ export default function PCside() {
   // getPcChoiceId();
 
   const pcChoice = getPcChoice();
-  onPcChoiceId(pcChoice);
+  onPcChoiceId(pcChoice.pcId);
+  onPcChoiceName(pcChoice.pcName);
+  onPcChoiceImg(pcChoice.pcImg);
 
   return (
     <section>

@@ -3,12 +3,14 @@ import { create } from 'zustand';
 export const useGameChoice = create(set => ({
   usChoiceId: null,
   pcChoiceId: null,
-  // usChoiceName: null,
-  // pcChoiceName: null,
+  usChoiceName: null,
+  pcChoiceName: null,
+  usChoiceImg: null,
+  pcChoiceImg: null,
 
-  getUserChoiceId: usidarg =>
+  getUserChoiceId: usargId =>
     set(state => {
-      state.usChoiceId = usidarg;
+      state.usChoiceId = usargId;
       console.log('PC_CHOICE_IN_STATE:::::', state.usChoiceId);
 
       return { usChoiceId: state.usChoiceId };
@@ -21,32 +23,50 @@ export const useGameChoice = create(set => ({
       return { pcChoiceId: state.pcChoiceId };
     }),
 
-  // getUserChoiceName: usnamearg =>
-  //   set(state => {
-  //     state.usChoicename = usnamearg;
-  //     // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
-  //     return { usChoicename: state.usChoicename };
-  //   }),
+  getUserChoiceName: usargName =>
+    set(state => {
+      state.usChoiceName = usargName;
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+      return { usChoiceName: state.usChoiceName };
+    }),
 
-  // getPcChoiceName: usarg =>
-  //   set(state => {
-  //     state.pcChoiceName = usarg;
-  //     // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
-  //     return { pcChoiceName: state.pcChoiceName };
-  //   }),
+  getPcChoiceName: usargName =>
+    set(state => {
+      state.pcChoiceName = usargName;
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+      return { pcChoiceName: state.pcChoiceName };
+    }),
 
-  // resetState: () =>
-  //   set(state => {
-  //     state.pcChoiceId = null;
-  //     // state.pcChoiceName = null;
-  //     state.usChoiceId = null;
-  //     // state.usChoiceName = null;
+  getUserChoiceImg: usargImg =>
+    set(state => {
+      state.usChoiceImg = usargImg;
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+      return { usChoiceImg: state.usChoiceImg };
+    }),
 
-  //     return {
-  //       usChoiceId: state.usChoiceId,
-  //       pcChoiceId: state.pcChoiceId,
-  //       // usChoiceName: state.usChoiceName,
-  //       // pcChoiceName: state.pcChoiceName,
-  //     };
-  //   }),
+  getPcChoiceImg: usargImg =>
+    set(state => {
+      state.pcChoiceImg = usargImg;
+      // console.log('USER_CHOICE_IN ST?ATE:::::', state.usChoice);
+      return { pcChoiceImg: state.pcChoiceImg };
+    }),
+
+  resetState: () =>
+    set(state => {
+      state.pcChoiceId = null;
+      state.usChoiceId = null;
+      state.pcChoiceName = null;
+      state.usChoiceName = null;
+      state.pcChoiceImg = null;
+      state.usChoiceImg = null;
+
+      return {
+        usChoiceId: state.usChoiceId,
+        pcChoiceId: state.pcChoiceId,
+        usChoiceName: state.usChoiceName,
+        pcChoiceName: state.pcChoiceName,
+        usChoiceImg: state.usChoiceImg,
+        pcChoiceImg: state.pcChoiceImg,
+      };
+    }),
 }));
