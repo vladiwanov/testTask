@@ -41,20 +41,28 @@ export default function ResultModule() {
   return (
     <section className={s.resultPage}>
       <div className={s.container}>
-        <h2 className={s.resultMessage}>
+        <h2 className={`${s.resultMessage} ${s.contentAnimationApearTitle}`}>
           Winer is: {gameRez()}
-          <div className={s.result}>
-            <div className={s.player}>
-              <h3>User</h3>
-              <img src={usChoiceImg} alt={usChoiceName} className={s.img} />
-            </div>
-            <div className={s.player}>
-              <h3>PC</h3>
-              <img src={pcChoiceImg} alt={pcChoiceName} className={s.img} />
-            </div>
-          </div>
-          <RestartButton />
         </h2>
+        <div className={s.result}>
+          <div className={s.player}>
+            <h3>User</h3>
+            <img
+              src={usChoiceImg}
+              alt={usChoiceName}
+              className={`${s.img} ${s.contentAnimationLeft}`}
+            />
+          </div>
+          <div className={s.player}>
+            <h3>PC</h3>
+            <img
+              src={pcChoiceImg}
+              alt={pcChoiceName}
+              className={`${s.img} ${s.contentAnimationRight}`}
+            />
+          </div>
+        </div>
+        <RestartButton />
       </div>
     </section>
   );

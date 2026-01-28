@@ -13,7 +13,7 @@ export default function MainPageView() {
   const { game } = routes;
 
   return (
-    <div className={s.mainContainer}>
+    <div className={`${s.mainContainer} ${s.contentAnimationApear}`}>
       <h1 className={s.mainTitile}>Hi! It's a Start Page</h1>
       <NavLink className={s.startButton} to={game}>
         Lets Begin?

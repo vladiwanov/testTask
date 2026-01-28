@@ -20,7 +20,7 @@ export default function PCside() {
   onPcChoiceImg(pcChoice.pcImg);
 
   return (
-    <section>
+    <section className={s.section}>
       <h2 className={s.title}>PC Choice</h2>
       <p className={s.pc}>???</p>
     </section>

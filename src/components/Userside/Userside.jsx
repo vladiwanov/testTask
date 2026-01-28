@@ -31,7 +31,7 @@ export default function Userside() {
         <div className={s.imgarray}>
           {/* <img src={img} alt="" /> */}
           {usrImg.map(({ name, id, path }) => (
-            <li key={id}>
+            <li key={id} className={s.contentAnimationApear}>
               <NavLink
                 className={s.button}
                 onClick={() => gameFun(id, name, path)}
