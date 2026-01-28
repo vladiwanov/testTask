@@ -21,7 +21,7 @@ export default function PCside() {
 
   return (
     <section>
-      <h2>PC Choice</h2>
+      <h2 className={s.title}>PC Choice</h2>
       <p className={s.pc}>???</p>
     </section>
   );

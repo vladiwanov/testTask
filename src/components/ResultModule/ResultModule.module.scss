@@ -1,3 +1,5 @@
+@import "../../styles/main.scss";
+
 .resultPage {
       display: block;
       margin: auto;
@@ -16,11 +18,33 @@
       text-align: center;
       // outline: 1px solid red;
       font-size: 50px;
-      color: #505050;
+      // color: #505050;
 }
 
 
 .result {
       display: flex;
       flex-direction: row;
+}
+
+@media screen and (min-width:$mobile) {
+      .img {
+            margin: 0 50px;
+            // outline: 2px solid darkblue;
+      }
+}
+
+@media screen and (min-width:$tablet) {
+      .img {
+            margin: 0 50px;
+      }
+
+}
+
+@media screen and (min-width:$desktop) {
+      .img {
+            margin: 0 50px;
+      }
+
+
 }

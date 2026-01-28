@@ -1,0 +1,36 @@
+.img {
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      // outline: 1px solid yellow;
+}
+
+@media screen and (min-width:$mobile) {
+      .img {
+            max-width: 480px;
+            // width: 480px;
+            height: 480px;
+            margin-bottom: 15px;
+
+      }
+}
+
+@media screen and (min-width:$tablet) {
+      .img {
+            max-width: 400px;
+            // width: 400px;
+            height: 400px;
+            margin-bottom: 20px;
+
+      }
+}
+
+@media screen and (min-width:$desktop) {
+      .img {
+            max-width: 600px;
+            // width: 600px;
+            height: 400px;
+      }
+
+}

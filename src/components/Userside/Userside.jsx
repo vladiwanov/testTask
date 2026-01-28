@@ -28,20 +28,22 @@ export default function Userside() {
     <section className={s.section}>
       <div className={s.container}>
         <h2 className={s.title}>Make You Choice</h2>
-        {/* <img src={img} alt="" /> */}
-        {usrImg.map(({ name, id, path }) => (
-          <li key={id}>
-            <NavLink
-              className={s.button}
-              onClick={() => gameFun(id, name, path)}
-              to={rez}
-            >
-              {/* <button className={s.button} onClick={() => gameFun(id)}> */}
-              <img src={path} alt={name} />
-              {/* </button> */}
-            </NavLink>
-          </li>
-        ))}
+        <div className={s.imgarray}>
+          {/* <img src={img} alt="" /> */}
+          {usrImg.map(({ name, id, path }) => (
+            <li key={id}>
+              <NavLink
+                className={s.button}
+                onClick={() => gameFun(id, name, path)}
+                to={rez}
+              >
+                {/* <button className={s.button} onClick={() => gameFun(id)}> */}
+                <img src={path} alt={name} className={s.img} />
+                {/* </button> */}
+              </NavLink>
+            </li>
+          ))}
+        </div>
       </div>
     </section>
   );

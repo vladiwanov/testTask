@@ -46,11 +46,11 @@ export default function ResultModule() {
           <div className={s.result}>
             <div className={s.player}>
               <h3>User</h3>
-              <img src={usChoiceImg} alt={usChoiceName} />
+              <img src={usChoiceImg} alt={usChoiceName} className={s.img} />
             </div>
             <div className={s.player}>
               <h3>PC</h3>
-              <img src={pcChoiceImg} alt={pcChoiceName} />
+              <img src={pcChoiceImg} alt={pcChoiceName} className={s.img} />
             </div>
           </div>
           <RestartButton />

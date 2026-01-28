@@ -1,14 +1,24 @@
-.pc {
+@import '../../styles/main.scss';
 
+.pc {
       display: block;
       margin: auto;
       text-align: center;
       width: auto;
-      height: 100vh;
+      // height: 100vh;
       // outline: 1px solid red;
       font-size: 250px;
       color: #707070;
+}
 
-
-
+.title {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      margin: auto;
+      text-align: center;
+      color: black;
+      font-size: 24px;
+      outline: 1px solid red;
 }

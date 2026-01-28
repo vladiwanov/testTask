@@ -1,9 +1,15 @@
 @import '../../styles/main.scss';
 
+.imgarray {
+      display: flex;
+      flex-direction: row;
+}
 
-
-.h1 {
-      display: block;
+.title {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
       margin: auto;
       text-align: center;
       color: black;
