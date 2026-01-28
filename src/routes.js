@@ -3,7 +3,7 @@
 
 const routes = {
   main: '/',
-  game: '/game',
+  game: 'game',
   rez: 'rez',
   end: 'end',
   // ======================================================
