@@ -8,6 +8,8 @@
     "dev": "vite --port 3007",
     "build": "vite build",
     "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p",
     "preview": "vite preview"
   },
   "dependencies": {
