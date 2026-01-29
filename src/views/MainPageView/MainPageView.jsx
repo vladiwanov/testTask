@@ -16,7 +16,7 @@ export default function MainPageView() {
     <div className={`${s.mainContainer} ${s.contentAnimationApear}`}>
       <h1 className={s.mainTitile}>Hi! It's a Start Page</h1>
       <NavLink className={s.startButton} to={game}>
-        Lets Begin?
+        Lets Begin
       </NavLink>
     </div>
   );

@@ -13,7 +13,7 @@ export default function RestartButton() {
   return (
     <section className={s.RestartButton}>
       <NavLink className={s.NavLink} to={game} onClick={restartFun}>
-        <h2 className={s.RestartButtonTitle}> play again?</h2>
+        <h2 className={s.RestartButtonTitle}>Play again</h2>
       </NavLink>
     </section>
   );
