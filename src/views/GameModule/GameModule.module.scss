@@ -2,16 +2,37 @@
 // @import '../../styles/animation';
 @import '../../styles/main.scss';
 
-.mainTitile {
+.mainTitle {
       display: block;
       // width: 100vw;
       // height: 100vh;
       text-align: center;
       margin: auto;
       // font-size: 64px;
-      font-size: 80px;
+      font-size: 20px;
       margin: auto;
       // padding: 400px;
       // background-color: black;
       color: #999;
+}
+
+
+
+@media screen and (min-width: $tablet) {
+      .mainTitle {
+            font-size: 25px;
+      }
+}
+
+
+@media screen and (min-width: $tablet) {
+      .mainTitle {
+            font-size: 30px;
+      }
+}
+
+@media screen and (min-width: $tablet) {
+      .mainTitle {
+            font-size: 70px;
+      }
 }

@@ -18,16 +18,29 @@ function App() {
       <Routes>
         <Route path={main} element={<Layout />}>
           <Route index element={<MainPageView />} />
-          <Route path={game} element={<GameLayout />}>
-            <Route index element={<GameModule />} />
-            <Route path={rez} element={<ResultModule />} />
-          </Route>
+          <Route path={game} element={<GameModule />} />
+          <Route path={rez} element={<ResultModule />} />
           <Route path={end} element={<EndPageView />} />
           <Route path={'*'} element={<NotFoundPage />} />
         </Route>
       </Routes>
     </>
   );
+  // return (
+  //   <>
+  //     <Routes>
+  //       <Route path={main} element={<Layout />}>
+  //         <Route index element={<MainPageView />} />
+  //         <Route path={game} element={<GameLayout />}>
+  //           <Route index element={<GameModule />} />
+  //           <Route path={rez} element={<ResultModule />} />
+  //         </Route>
+  //         <Route path={end} element={<EndPageView />} />
+  //         <Route path={'*'} element={<NotFoundPage />} />
+  //       </Route>
+  //     </Routes>
+  //   </>
+  // );
 }
 
 export default App;

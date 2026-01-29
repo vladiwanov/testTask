@@ -46,7 +46,7 @@ export default function ResultModule() {
         </h2>
         <div className={s.result}>
           <div className={s.player}>
-            <h3>User</h3>
+            <h3 className={s.text}>User</h3>
             <img
               src={usChoiceImg}
               alt={usChoiceName}
@@ -54,7 +54,7 @@ export default function ResultModule() {
             />
           </div>
           <div className={s.player}>
-            <h3>PC</h3>
+            <h3 className={s.text}>PC</h3>
             <img
               src={pcChoiceImg}
               alt={pcChoiceName}

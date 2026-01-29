@@ -11,7 +11,7 @@ export default function GameModule() {
 
   return (
     <>
-      <h2 className={s.mainTitile}>You are playing with the Computer.</h2>
+      <h2 className={s.mainTitle}>You are playing with the Computer.</h2>
       <StartModule />
     </>
   );

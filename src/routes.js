@@ -4,8 +4,8 @@
 const routes = {
   main: '/',
   game: '/game',
-  rez: 'rez',
-  end: 'end',
+  rez: '/rez',
+  // end: 'end',
   // ======================================================
 };
 export default routes;

@@ -1,7 +1,7 @@
 @import '../../styles/main.scss';
 
 .imgarray {
-      display: flex;
+      display: block;
       flex-direction: row;
 }
 
@@ -15,4 +15,26 @@
       color: black;
       font-size: 24px;
       // outline: 1px solid red;
+}
+
+
+@media screen and (min-width: $tablet) {
+      .imgarray {
+            display: block;
+      }
+
+}
+
+
+@media screen and (min-width: $tablet) {
+      .imgarray {
+            display: flex;
+      }
+}
+
+// 
+@media screen and (min-width: $tablet) {
+      .imgarray {
+            display: flex;
+      }
 }
