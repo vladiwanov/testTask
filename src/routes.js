@@ -5,7 +5,7 @@ const routes = {
   main: '/',
   game: '/game',
   rez: '/rez',
-  // end: 'end',
+  end: '/end',
   // ======================================================
 };
 export default routes;

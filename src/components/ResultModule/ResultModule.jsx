@@ -2,6 +2,7 @@ import React from 'react';
 import { useGameChoice } from '../../store';
 import s from './ResultModule.module.scss';
 import RestartButton from '../RestartButton';
+import EndButton from '../EndButton';
 
 export default function ResultModule() {
   // const userChoiceId = useGameChoice(state => state.usChoiceId);
@@ -63,6 +64,7 @@ export default function ResultModule() {
           </div>
         </div>
         <RestartButton />
+        <EndButton />
       </div>
     </section>
   );
