@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { Routes, Route } from 'react-router';
+import { Routes, Router, Route } from 'react-router-dom';
 import GameModule from './views/GameModule';
 import MainPageView from './views/MainPageView/MainPageView';
 import EndPageView from './views/EndPageView/EndPageView';
@@ -17,12 +17,10 @@ function App() {
     <>
       <Routes>
         <Route path={main} element={<Layout />}>
-          <Route index element={<MainPageView />} />
-          {/* <Route path={game} element={<GameLayout />}> */}
+          <Route path={main} element={<MainPageView />} />
+          <Route path={end} element={<EndPageView />} />
           <Route path={game} element={<GameModule />} />
           <Route path={rez} element={<ResultModule />} />
-          {/* </Route/> */}
-          <Route path={end} element={<EndPageView />} />
           <Route path={'*'} element={<NotFoundPage />} />
         </Route>
       </Routes>

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import s from './Userside.module.scss';
 import usrImg from '../../db/images-db/imges.js';
 import routes from '../../routes';
